@@ -8,3 +8,13 @@ repositories {
 dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.+'
 }
+
+test {
+
+  // Making it easier to see the output where we tell you to interrupt.
+  testLogging.showStandardStreams = true
+
+  // Even this doesn't help!
+  reports.junitXml.outputPerTestCase = true
+
+}
